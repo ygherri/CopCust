@@ -1,0 +1,49 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+nav {
+    padding: 10px;
+    height: 70px;
+    border-bottom: 1px solid #D3D3D3;
+}
+.logo {
+    width: 20%;
+}
+.logo img {
+    width: 70px;
+    max-width: 100%;
+}
+.d-flex {
+    display: flex;
+}
+.container {
+    height: 500px;
+}
+.container h1 {
+    text-align: center;
+}
+.text-mikado-yellow {
+    color: #FFC700;
+}
+footer {
+    align-items: center;
+    padding: 30px;
+    border-top: 1px solid #D3D3D3;
+}
+.coordoonees {
+    margin-left: 32px;
+}
+.coordonnees ul {
+    list-style-type: none;
+    border-left: 2px solid #000;
+}
+.coordonnees li img {
+    width: 20px;
+    max-width: 100%;
+    margin-right: 10px;
+}
+.logo-footer {
+    width: 200px;
+    max-width: 100%;
+}
