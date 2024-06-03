@@ -191,6 +191,7 @@ footer {
 }
 .contenu-article {
     background-color: #ccc;
+    padding: 100px;
 }
 .titre {
     font-weight: bold;
