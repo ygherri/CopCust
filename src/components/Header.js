@@ -1,4 +1,5 @@
 import React from 'react'; 
+import logo from '../assets/images/logo_copcust.svg';
 const Header = () => {
     return (
         <div>
@@ -6,36 +7,21 @@ const Header = () => {
       <header>
         <nav>
           <div className="logo">
-            <img src="assets/images/alcyone_logo.svg" alt="Logo Alcyone" />
+            <img src={logo} alt="Logo CopCust" />
+          </div>
+          <div className='menu'>
+            <ul>
+              <li>Accueil</li>
+              <li>Produits</li>
+              <li>Blog</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+          <div className='button'>
+            <button className='btn'>Inscription / Connexion</button>
           </div>
         </nav>
       </header>
-      <main className="container">
-        <h1>
-          Site en construction
-          <span className="text-mikado-yellow">...</span>
-        </h1>
-      </main>
-      <footer className="d-flex">
-        <div className="logo-footer">
-          <img src="assets/images/alcyone_logo.svg" alt="Logo footer" />
-        </div>
-        <div className="coordonnees">
-          <ul>
-            <li className="d-flex">
-              <img src="assets/images/phone.svg" alt="téléphone" />
-              <p>01 23 45 67 89</p>
-            </li>
-            <li className="d-flex">
-              <img src="assets/images/mail.svg" alt="mail" />
-              <p>agencalcyone@gmail.com</p>
-            </li>
-            <li>
-              <p>8 bis rue de la Fontaine au Roi, 75011 Paris</p>
-            </li>
-          </ul>
-        </div>
-      </footer>
     </div>
         </div>
     )
