@@ -179,3 +179,24 @@ footer {
 .active, .dot:hover {
     background-color: #717171;
 }
+/* Articles */
+.articles-section {
+    display: flex;
+    padding: 100px;
+}
+.image-article {
+    width: 50%;
+    height: 600px;
+    background-color: gray;
+}
+.contenu-article {
+    background-color: #ccc;
+}
+.titre {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.contenu-article p {
+    margin-bottom: 30px;
+}
