@@ -64,3 +64,36 @@ nav {
 .scroll p {
     font-weight: bold;
 }
+.concept {
+    background-image: url(../src/images/concept-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 80px;
+}
+.concept_title p {
+    text-transform: uppercase;
+}
+.left_concept {
+    width: 50%;
+}
+
+.left_concept span, .text-orange {
+    color: #F18F01;
+}
+.text-orange span {
+    font-size: 40px;
+}
+.right_concept {
+    width: 50%;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+.d-flex {
+    display: flex;
+}
+.concept_stat {
+    display: flex;
+}
+.left_stat {
+    margin-right: 30px;
+}
