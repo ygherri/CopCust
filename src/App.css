@@ -97,3 +97,24 @@ nav {
 .left_stat {
     margin-right: 30px;
 }
+.valeurs {
+    background-image: url(../src/images/valeur_bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 80px;
+}
+.titles {
+    text-align: center;
+}
+.titles p{
+    text-transform: uppercase;
+}
+.cards-valeurs {
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-item {
+    width: 30%;
+}
