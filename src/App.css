@@ -80,6 +80,7 @@ nav {
     width: 50%;
     margin: 100px auto 0;
     text-align: center;
+    cursor: pointer;
 }
 .concept {
     background-image: url(../src/images/concept-bg.png);
@@ -98,7 +99,7 @@ nav {
     color: #F18F01;
 }
 .text-orange span {
-    font-size: 50px;
+    font-size: 80px;
 }
 .right_concept {
     width: 50%;
@@ -362,6 +363,12 @@ footer {
 .uppercase {
     text-transform: uppercase;
 }
+.couronne {
+    transform: translateX(-36px);
+}
+.left-title, .right-title {
+    display: none;
+}
 .title-footer p {
 white-space: pre;
 }
@@ -372,14 +379,15 @@ white-space: pre;
     margin: 50px 0 200px;
 }
 .input-newsleter input {
-    background: #F1F1F1;
+    background: #171717;
     border-radius: 8.976px;
     border: 0.1px solid #000;
     width: 25%;
     height: 67px;
     padding-left: 10px;
-    
-
+}
+::placeholder {
+    color: #f1f1f1;
 }
 .input-newsleter button {
     background-color: #F18F01;
@@ -439,6 +447,9 @@ white-space: pre;
 .f-bold {
     font-weight: bold;
 }
+.couronne-mobile {
+    display: none;
+}
 @media (max-width: 768px) { 
     .carousel-section{
         overflow: hidden;
@@ -463,21 +474,29 @@ white-space: pre;
     .uppercase {
         display: none;
     }
+    
     .btn-nav-mobile button {
         background-color: #F18F01;
         border: none;
         font-weight: bold;
         line-height: 22px;
-        width: 100px;
-        height: 45px;
+        width: 98px;
+        height: 41px;
         border-radius: 5px;
         font-weight: bold;
         line-height: 20px;
         cursor: pointer;
-        font-size: 12px;
+        font-size: 10px;
     }
     nav {
         display: none
+    }
+    .couronne-mobile {
+        display: block;
+        transform: translate3d(98px, 10px, 10px);
+    }
+    .couronne {
+        display: none;
     }
     .nav-mobile {
         display: block;
@@ -486,7 +505,20 @@ white-space: pre;
         background-color: #000;
         height: 78px;
         align-items: center;
-        padding: 0 10px;
+        padding: 0 20px;
+    }
+    .left-title, .right-title {
+        display: block;
+    }
+    .left-title {
+        transform: translate3d(10px, -13px, 10px);
+    }
+    .right-title {
+        transform: translate3d(-10px, -9px, 10px);
+    }
+    .icones-title {
+        display: flex;
+        align-items: center;
     }
     Header {
         background-position-x: 48%;
@@ -514,6 +546,7 @@ white-space: pre;
     .scroll-mobile {
         display: block;
         margin-top: 30px;
+        cursor: pointer;
     }
     .scroll-mobile p {
         font-weight: bold;
