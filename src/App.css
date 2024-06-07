@@ -372,14 +372,15 @@ footer {
 .left-title, .right-title {
     display: none;
 }
-.title-footer p {
-white-space: pre;
+.m-b-title {
+    margin-bottom: 10px;
 }
+
 .title-footer h2{
     margin: 20px 0;
 }
 .input-newsleter {
-    margin: 50px 0 200px;
+    margin: 50px 0 200px 127px;
 }
 .input-newsleter input {
     background: #171717;
@@ -402,6 +403,7 @@ white-space: pre;
     cursor: pointer;
     height: 50px;
     font-weight: bold;
+    color: #171717;
 }
 .logo-footer {
     text-align: start;
@@ -659,6 +661,9 @@ white-space: pre;
         }
         .tag-blog {
             margin-bottom: 13px !important;
+        }
+        .left_blog .lien-article {
+            margin-bottom: 60px;
         }
         .article-text h3 {
             margin-bottom: 10px; 
