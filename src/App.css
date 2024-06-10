@@ -34,7 +34,7 @@ p, ul li, button{
     font-optical-sizing: auto;
     font-weight: 500;
 }
-.btn-nav button {
+.btn-nav button, .btn-orange {
     background-color: #F18F01;
     color: #F1F1F1;
     border: none;
@@ -46,6 +46,11 @@ p, ul li, button{
     font-weight: bold;
     line-height: 20px;
     cursor: pointer;
+    height: 40px;
+    width: 300px;
+}
+.btn-paires {
+    text-align: center;
 }
 .text-orange {
     color: #F18F01;
@@ -456,6 +461,18 @@ footer {
 .couronne-mobile {
     display: none;
 }
+.paires {
+    padding: 80px;
+}
+.gallery-sneakers img {
+    width: 50%;
+    max-width: 100%;
+}
+.gallery-sneakers {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
 @media (max-width: 768px) { 
     .carousel-section{
         overflow: hidden;
@@ -528,6 +545,7 @@ footer {
     .icones-title {
         display: flex;
         align-items: center;
+        justify-content: center;
     }
     Header {
         background-position-x: 48%;
