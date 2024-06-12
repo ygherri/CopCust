@@ -130,7 +130,7 @@ nav {
     padding: 80px;
 }
 .titles {
-    text-align: center;
+    
     margin-bottom: 50px;
 }
 .titles p, .titles-products p {
@@ -191,10 +191,9 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 10px; /* Ajustez la marge entre les cartes selon vos besoins */
+    margin: 0 10px;
 }
 .carousel-section {
-    /* padding: 100px; */
     width: 100%;
     margin: 50px auto;
 }
@@ -461,7 +460,7 @@ footer {
 .couronne-mobile {
     display: none;
 }
-.paires {
+.paires, .artist-custom {
     padding: 80px;
 }
 .gallery-sneakers img {
@@ -473,6 +472,83 @@ footer {
     flex-wrap: wrap;
     margin-top: 50px;
 }
+.gallery-artist img {
+    width: 45%;
+}
+.gallery-artist {
+    color: #fff;
+    background-color: #171717;
+    border-radius: 30px;
+    height: 800px;
+}
+.gallery-artist {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #fff;
+    background-color: #171717;
+    border-radius: 30px;
+    height: 800px;
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  .artist img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  .artist h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+  }
+  .artist p {
+    font-size: 14px;
+    color: #bbb;
+  }
+  .gallery-artist::before,
+  .gallery-artist::after,
+  .artist::before,
+  .artist::after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.7;
+  }
+
+  .gallery-artist::before {
+    width: 60px;
+    height: 60px;
+    top: 10%;
+    left: 20%;
+  }
+  .gallery-artist::after {
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 70%;
+  }
+  .artist::before {
+    width: 50px;
+    height: 50px;
+    top: 30%;
+    left: 80%;
+  }
+  .artist::after {
+    width: 70px;
+    height: 70px;
+    top: 70%;
+    left: 30%;
+  }
+  .paires-perso {
+    background-image: url('../public/images//vector-paires.svg');
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position-y: bottom;
+  }
+
 @media (max-width: 768px) { 
     .carousel-section{
         overflow: hidden;
