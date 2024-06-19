@@ -35,7 +35,7 @@ p, ul li, button{
     font-weight: 500;
 }
 .btn-nav button, .btn-orange {
-    background-color: #F18F01;
+    /*background-color: #F18F01;*/
     color: #F1F1F1;
     border: none;
     font-weight: bold;
@@ -47,7 +47,19 @@ p, ul li, button{
     line-height: 20px;
     cursor: pointer;
     height: 40px;
+    width: 400px;
+}
+.btn-rose button {
+    background-color: #FF6B8E;
+    border: none;
+    color: #fff;
     width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
 }
 .btn-paires {
     text-align: center;
@@ -55,6 +67,7 @@ p, ul li, button{
 .text-orange {
     color: #F18F01;
 }
+
 .logo {
     width: 10%;
 }
@@ -88,7 +101,6 @@ nav {
     cursor: pointer;
 }
 .concept {
-    background-image: url(../src/images/concept-bg.png);
     background-repeat: no-repeat;
     background-size: contain;
     padding: 80px;
@@ -100,9 +112,9 @@ nav {
     width: 50%;
 }
 
-.left_concept span, .text-orange {
+/* .left_concept span, .text-orange {
     color: #F18F01;
-}
+} */
 .text-orange span {
     font-size: 80px;
 }
@@ -124,9 +136,6 @@ nav {
     margin-right: 30px;
 }
 .valeurs {
-    background-image: url(../src/images/valeur_bg.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
     padding: 80px;
 }
 .titles {
@@ -268,7 +277,7 @@ nav {
 }
 
 .active, .dot:hover {
-    background-color: #F18F01;
+    background-color: #FF6B8E;
 }
 .concept-title {
     margin-bottom: 30px;
@@ -359,15 +368,12 @@ nav {
     padding: 40px 0;
 }
 footer {
-    background-image: url(./images/footer-bg.png);
-    background-repeat: no-repeat;
-    background-size: contain;
     height: auto;
     text-align: center;
-    padding-top: 240px;
+    padding-top: 150px;
     background-position-x: center;
 }
-.uppercase {
+.title-uppercase {
     text-transform: uppercase;
 }
 .couronne {
@@ -384,30 +390,60 @@ footer {
     margin: 20px 0;
 }
 .input-newsleter {
-    margin: 50px 0 200px 127px;
+    display: block;
+    width: 30%;
+    margin: 30px auto 150px;
 }
-.input-newsleter input {
+.input-newsleter input, .input-newsleter textarea {
     background: #171717;
-    border-radius: 8.976px;
+    border-radius: 15px;
     border: 0.1px solid #000;
-    width: 25%;
-    height: 67px;
-    padding-left: 10px;
+    width: 100%;
+    margin: 5px 0;    
     color: #f1f1f1;
+    font-family: "Raleway", sans-serif;
+
 }
+
+.input-newsleter textarea {
+    height: 200px;
+    padding: 20px 0 0px 20px;}
+.input-newsleter input {
+    height: 50px;
+    padding-left: 20px;
+
+}
+.submit {
+    border-radius: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    width: 100%;
+    color: #fff;
+    background-color: #FF6B8E;
+
+}
+
+ 
 ::placeholder {
     color: #f1f1f1;
+    font-family: "Raleway", sans-serif;
+    padding-left: 10px;
 }
-.input-newsleter button {
-    background-color: #F18F01;
+.input-newsleter-sign button {
+    background-color: #FF6B8E;
     border: none;
     padding: 10px 30px;
     border-radius: 5px;
-    transform: translate3d(-141px, 0px, 10px);
+    transform: translate3d(185px, -64px, 10px);
     cursor: pointer;
     height: 50px;
     font-weight: bold;
-    color: #171717;
+    color: #fff;
+} 
+.input-newsleter-sign input {
+    height: 67px !important;
 }
 .logo-footer {
     text-align: start;
@@ -494,11 +530,6 @@ footer {
     overflow: hidden;
   }
 
-  .artist img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-  }
   .artist h3 {
     margin: 10px 0 5px;
     font-size: 18px;
@@ -507,49 +538,111 @@ footer {
     font-size: 14px;
     color: #bbb;
   }
-  .gallery-artist::before,
-  .gallery-artist::after,
-  .artist::before,
-  .artist::after {
-    content: '';
+  .artist-s img {
+    width: 75px;
+    height: 75px;
+    flex-shrink: 0;
+  }
+ .title-upper {
+    text-transform: uppercase;
+ }
+  .text-blue {
+    color: #8EBBFF;
+  }
+  .size-80 span{
+    font-size: 80px;
+  }
+  .text-rose {
+    color:  #FF6B8E;
+  }
+  .title-m-b {
+    margin-bottom: 50px;
+  }
+  .text-violet {
+    color: #CEBEFD;
+  }
+  .artist-1 {
     position: absolute;
-    background-color: #fff;
-    border-radius: 50%;
-    opacity: 0.7;
-  }
-
-  .gallery-artist::before {
-    width: 60px;
-    height: 60px;
+    left: 19%;
     top: 10%;
-    left: 20%;
   }
-  .gallery-artist::after {
-    width: 40px;
-    height: 40px;
-    top: 50%;
-    left: 70%;
+  .artist-2 {
+    position: absolute;
+    left: 10%;
+    top: 25%;
   }
-  .artist::before {
-    width: 50px;
-    height: 50px;
-    top: 30%;
+  .artist-3 {
+    position: absolute;
+    left: 43%;
+    top: 7%;
+  }
+  .artist-4 {
+    position: absolute;
     left: 80%;
+    top: 6%;
   }
-  .artist::after {
-    width: 70px;
-    height: 70px;
-    top: 70%;
-    left: 30%;
+  .artist-5 {
+    position: absolute;
+    left: 27%;
+    top: 28%;
   }
-  .paires-perso {
-    background-image: url('../public/images//vector-paires.svg');
-    background-repeat: no-repeat;
-    background-size: initial;
-    background-position-y: bottom;
+  .artist-6 {
+    position: absolute;
+    left: 66%;
+    top: 16%;
+  }
+  .artist-7 {
+    position: absolute;
+    left: 87%;
+    top: 25%;
+  }
+  .artist-8 {
+    position: absolute;
+    left: 20%;
+    top: 48%;
+  }
+  .artist-9 {
+    position: absolute;
+    left: 75%;
+    top: 38%;
+  }
+  .artist-10 {
+    position: absolute;
+    left: 10%;
+    top: 78%;
+  }
+  .artist-11 {
+    position: absolute;
+    left: 34%;
+    top: 65%;
+
+  }
+  .artist-12 {
+    position: absolute;
+    left: 57%;
+    top: 58%;
+  }
+  .artist-13 {
+    position: absolute;
+    left: 86%;
+    top: 74%;
+  }
+  .artist-14 {
+    position: absolute;
+    left: 45%;
+    top: 40%;
+  }
+  .artist-b {
+    width: 300px;
+    height: 300px;
+  }
+  .btn-position {
+    position: absolute;
+    bottom: 5%;
   }
 
 @media (max-width: 768px) { 
+    
     .carousel-section{
         overflow: hidden;
         padding: 0;
@@ -576,6 +669,12 @@ footer {
     .uppercase {
         display: none;
     }
+    .header-text h1 {
+        margin-top: 0;
+    }
+    .m-t-50 {
+        margin-top: 50px;
+    }
     
     .btn-nav-mobile button {
         background-color: #F18F01;
@@ -600,14 +699,17 @@ footer {
     .couronne {
         display: none;
     }
-    .nav-mobile {
-        display: block;
+    .nav-mobile {   
         display: flex;
         justify-content: space-between;
-        background-color: #000;
         height: 78px;
         align-items: center;
-        padding: 0 20px;
+        padding: 12px 24px;
+        box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.08);
+        background-color: #fff;
+    }
+    .logo-mobile {
+        width: 11%;
     }
     .left-title, .right-title {
         display: block;
@@ -620,12 +722,12 @@ footer {
     }
     .icones-title {
         display: flex;
-        align-items: center;
         justify-content: center;
     }
     Header {
         background-position-x: 48%;
         background-size: cover;
+        height: 690px;
     }
     .h1-mobile {
         display: block;
@@ -637,25 +739,40 @@ footer {
         padding: 100px 30px;
     }
     .header-text p {
-        width: 80%;
+        width: 46%;
         font-size: 12px;
     }
     .btn-nav {
-        display: none;
+        display: block;
+    }
+    .btn-rose button {
+        width: 216px;
+        font-size: 12px;
+        height: 38px;
     }
     .scroll {
-        display: none;
-    }
-    .scroll-mobile {
         display: block;
-        margin-top: 30px;
-        cursor: pointer;
+        margin: auto;
     }
+    .scroll-mobile-2 {
+        margin-top: 150px;
+    }
+    .header2 {
+        height: 765px;
+    }
+    
     .scroll-mobile p {
         font-weight: bold;
     }
-    .concept {
+    .concept, .valeurs, .paires{
         padding: 40px;
+        background-color: #F6F6F6;
+    }
+    .artist-custom {
+        padding: 0;
+    }
+    .concept {
+        text-align: center;
     }
     .d-flex-concept {
         display: block;
@@ -672,12 +789,26 @@ footer {
     }
     .concept_stat {
         margin: 80px 0;
+        display: block;
+    }
+    .size-80, .size-80 span  {
+        font-size: 40px !important;
+    }
+    .left_stat p, .right_stat p {
+        margin-bottom: 20px;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .p-40 {
+        padding: 40px;
     }
     .valeurs {
-        background-color: #171717;
-        color: #f1f1f1;
+        background-color: #f1f1f1;
+        color: #000;
         border-radius: 20px;
         padding: 40px;
+        text-align: center;
     }
     .valeurs h2 {
         margin: 20px 0;
@@ -767,13 +898,17 @@ footer {
             padding-top: 100px;
         }
         .input-newsleter input {
-            width: 80%;
+            width: 100%;
+            padding-left: 0;
         }
         .input-newsleter button {
-            transform: translate3d(88px, -59px, 10px);
+            transform: none;
         }
         .input-newsleter {
-            margin: 50px 0 90px;
+            width: 90%;
+        }
+        .input-newsleter textarea {
+            padding-left: 0;
         }
         .footer-items {
             padding: 0 40px;
@@ -789,7 +924,10 @@ footer {
             flex-wrap: wrap;
         }
         .logo-footer {
-            width: 50%;
+            width: 30%;
+        }
+        .logo-footer img {
+            width: 100%;
         }
         .logo-footer svg {
             width: 100px;
@@ -797,6 +935,7 @@ footer {
         .rs-img {
             width: 50%;
             display: flex;
+            justify-content: end;
         }
         .rs-img img {
             width: 20px;
@@ -808,7 +947,32 @@ footer {
             font-size: 8px;
             font-weight: bold;
             margin: 30px 0;
-    
         }
+        .artist-1, .artist-2, .artist-4, .artist-5, .artist-7, .artist-9, .artist-10, .artist-13 {
+            display: none;
+        }
+        .artist-6 {
+            left: 95%;
+        }
+        .artist-3 {
+            left: 25%;
+        }
+        .artist-14 {
+            left: 37%;
+            top: 40%;
+        }
+        .artist-8 {
+            left: -6%;
+            top: 27%;
+        }
+        .artist-12 {
+            left: 72%;
+            top: 65%;
+        }
+        .artist-11 {
+            left: 1%;
+            top: 70%;
+        }
+
 
     }
