@@ -1,11 +1,47 @@
 import React, { useState } from 'react';
-
+import arrowBottom from '../../src/images/arrow-bottom.svg';
+import couronneMobile from '../../src/images/couronne-mobile.png';
+import couronne from '../../src/images/couronne.png';
+import paire1 from '../../src/images/paire1.png';
+import paire2 from '../../src/images/paire2.png';
+import paire3 from '../../src/images/paire3.png';
+import paire4 from '../../src/images/paire4.png';
+import logoMobile from '../../src/images/logo_mini_copcust.svg';
+import logoCopcust from '../../src/images/logo-copcust.png';
+import artist1 from '../../src/images/artist1.png';
+import artist2 from '../../src/images/artist2.png';
+import artist3 from '../../src/images/artist3.png';
+import artist4 from '../../src/images/artist4.png';
+import artist5 from '../../src/images/artist5.png';
+import artist6 from '../../src/images/artist6.png';
+import artist7 from '../../src/images/artist7.png';
+import artist8 from '../../src/images/artist8.png';
+import artist9 from '../../src/images/artist9.png';
+import artist10 from '../../src/images/artist10.png';
+import artist11 from '../../src/images/artist11.png';
+import artist12 from '../../src/images/artist12.png';
+import artist13 from '../../src/images/artist13.png';
+import artist14 from '../../src/images/artist14.png';
+import pairePerso1 from '../../src/images/paire-perso1.png';
+import pairePerso2 from '../../src/images/paire-perso2.png';
+import pairePerso3 from '../../src/images/paire-perso3.png';
+import pairePerso4 from '../../src/images/paire-perso4.png';
+import union from '../../src/images/union.png';
+import following from '../../src/images/following.png';
+import brush from '../../src/images/brush.png'
+import blog9 from '../../src/images/9.png';
+import blog10 from '../../src/images/10.png';
+import blog11 from '../../src/images/11.png';
+import tiktokIcon from '../../src/images/social_media/tiktok.svg';
+import instagramIcon from '../../src/images/social_media/instagram.svg';
+import pinterestIcon from '../../src/images/social_media/pinterest.svg';
+import menu from '../../src/images/menu-burger.png'
 function LandingPage() {
-    const [setCurrentSlide] = useState(0);
 
   const handleSlideChange = (index) => {
     setCurrentSlide(index);
   };
+  const [setCurrentSlide] = useState(0);
   return (
     <div>
       <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -13,12 +49,23 @@ function LandingPage() {
       <header className="header2">
         <div className="nav-mobile">
           <div className="logo-mobile">
-            <img src="../public/images/logo_mini_copcust.svg" alt="logo mobile" />
+            <img src={logoMobile} alt="logo mobile" />
           </div>
+          <img src={menu} alt="menu"/>
         </div>
         <nav>
           <div className="logo">
-            {/* SVG content here */}
+            <img src={logoCopcust} alt="" />
+          </div>
+          <div className='justify-content'>
+          <div className='liens'>
+            <ul>
+                <li>Lien</li>
+                <li>Lien</li>
+                <li>Lien</li>
+            </ul>
+          </div>
+          <div className='btn-signin'>S'inscrire à la waitlist</div>
           </div>
         </nav>
         <div className="header-text">
@@ -43,13 +90,13 @@ function LandingPage() {
         </div>
         <div className="scroll scroll-mobile-2">
           <p>Customise tes paires</p>
-          <img src="../public/arrow-bottom.svg" alt="" />
+          <img src={arrowBottom} alt="" />
         </div>
       </header>
       <div className="concept">
         <div className="concept-title">
-          <img className="couronne-mobile" src="../public/couronne-mobile.png" alt="" />
-          <img className="couronne" src="../public/couronne.png" alt="" />
+          <img className="couronne-mobile" src={couronneMobile} alt="" />
+          <img className="couronne" src={couronne} alt="" />
           <p className="f-bold title-upper">Notre concept</p>
         </div>
         <div className="d-flex-mobile d-flex-concept">
@@ -91,60 +138,60 @@ function LandingPage() {
           <h2><span className="text-rose">Acheter</span> directement<br />vos paires à personnaliser</h2>
         </div>
         <div className="gallery-sneakers">
-          <img src="../public/images/paire1.png" alt="" />
-          <img src="../public/images/paire2.png" alt="" />
-          <img src="../public/images/paire3.png" alt="" />
-          <img src="../public/images/paire4.png" alt="" />
+          <img src={paire1} alt="" />
+          <img src={paire2} alt="" />
+          <img src={paire3} alt="" />
+          <img src={paire4} alt="" />
         </div>
         <div className="btn-paires btn-rose"><button>Acheter ma paire personnalisée</button></div>
       </div>
       <div className="artist-custom">
-        <div className="title-m-b">
+        <div className="title-m-b text-center p-40">
           <p className="title-m f-bold title-upper">Nos artist custom</p>
-          <h2>Nos <span className="text-blue">Artist Custom </span>sont à votre <br />disposition</h2>
+          <h2>Nos <span className="text-blue">Artist Custom </span>sont à votre disposition</h2>
         </div>
         <div className="gallery-artist">
           <div className="artist-1 artist-s">
-            <img src="../public/images/artist1.png" alt="" />
+            <img src={artist1} alt="" />
           </div>
           <div className="artist-2 artist-s">
-            <img src="../public/images/artist2.png" alt="" />
+          <img src={artist2} alt="" />
           </div>
           <div className="artist-3 artist-s">
-            <img src="../public/images/artist3.png" alt="" />
+          <img src={artist3} alt="" />
           </div>
           <div className="artist-4 artist-s">
-            <img src="../public/images/artist4.png" alt="" />
+          <img src={artist4} alt="" />
           </div>
           <div className="artist-5 artist-s">
-            <img src="../public/images/artist5.png" alt="" />
+          <img src={artist5} alt="" />
           </div>
           <div className="artist-6 artist-s">
-            <img src="../public/images/artist6.png" alt="" />
+          <img src={artist6} alt="" />
           </div>
           <div className="artist-7 artist-s">
-            <img src="../public/images/artist7.png" alt="" />
+          <img src={artist7} alt="" />
           </div>
           <div className="artist-8 artist-s">
-            <img src="../public/images/artist8.png" alt="" />
+          <img src={artist8} alt="" />
           </div>
           <div className="artist-9 artist-s">
-            <img src="../public/images/artist9.png" alt="" />
+          <img src={artist9} alt="" />
           </div>
           <div className="artist-10 artist-s">
-            <img src="../public/images/artist10.png" alt="" />
+          <img src={artist10} alt="" />
           </div>
           <div className="artist-11 artist-s">
-            <img src="../public/images/artist11.png" alt="" />
+          <img src={artist11} alt="" />
           </div>
           <div className="artist-12 artist-s">
-            <img src="../public/images/artist12.png" alt="" />
+          <img src={artist12} alt="" />
           </div>
           <div className="artist-13 artist-s">
-            <img src="../public/images/artist13.png" alt="" />
+          <img src={artist13} alt="" />
           </div>
           <div className="artist-14 artist-b">
-            <img src="../public/images/artist14.png" alt="" />
+          <img src={artist14} alt="" />
           </div>
           <div className="btn-rose btn-position"><button>Je découvre les partenaires</button></div>
         </div>
@@ -155,10 +202,10 @@ function LandingPage() {
           <h2>Découvrez toutes les paires <span className="text-violet">déjà <br />personnalisées </span>qui vous attendent</h2>
         </div>
         <div className="gallery-sneakers">
-          <img src="../public/images/paire-perso1.png" alt="" />
-          <img src="../public/images/paire-perso2.png" alt="" />
-          <img src="../public/images/paire-perso3.png" alt="" />
-          <img src="../public/images/paire-perso4.png" alt="" />
+          <img src={pairePerso1} alt="" />
+          <img src={pairePerso2} alt="" />
+          <img src={pairePerso3} alt="" />
+          <img src={pairePerso4} alt="" />
         </div>
         <div className="btn-paires btn-rose"><button>Personnaliser ma paire</button></div>
       </div>
@@ -170,22 +217,22 @@ function LandingPage() {
             <img className="right-title" src="%PUBLIC_URL%/right-title.svg" alt="" />
           </div>
           <h2>Pourquoi acheter sur 
-            <span className="text-blue">CopCust</span> ?</h2>
+            <span className="text-blue"> CopCust</span> ?</h2>
         </div>
         <img src="%PUBLIC_URL%/images/arrow-right.png" alt="" />
         <div className="cards-valeurs">
           <div className="card-item">
-            <img src="../public/images/union.png" alt="" />
+            <img src={union} alt="" />
             <h3>Suivi de ton colis</h3>
             <p>A tout moment, tu peux suivre étape par étape la création de ta sneakers customisée ! </p>
           </div>
           <div className="card-item">
-            <img src="../public/images/following.png" alt="" />
+            <img src={following} alt="" />
             <h3>Large choix d’artistes custom</h3>
             <p>Nous mettons en avant des créateurs émergents et confirmés, Une sélection diverse de style pouvant répondre à tes envies !</p>
           </div>
           <div className="card-item">
-            <img src="../public/images/brush.png" alt="" />
+            <img src={brush} alt="" />
             <h3>Expression libre</h3>
             <p>Chaque paire de sneakers est une œuvre. Copcust est plus qu'une simple marketplace, c'est une révolution dans la sneakers personnalisée.</p>
           </div>
@@ -270,7 +317,7 @@ function LandingPage() {
           </div>
           <div className="right_blog">
             <div className="card-article border-bottom p-t-0">
-              <div className="img-card"><img src="../public/9.png" alt="" /></div>
+              <div className="img-card"><img src={blog9} alt="" /></div>
               <div className="article-text">
                 <p className="tag-blog">Conseils</p>
                 <h3>Que faire de mes anciennes sneakers ?</h3>
@@ -283,7 +330,7 @@ function LandingPage() {
               </div>
             </div>
             <div className="card-article border-bottom p-40">
-              <div className="img-card"><img src="../public/10.png" alt="" /></div>
+              <div className="img-card"><img src={blog10} alt="" /></div>
               <div className="article-text">
                 <p className="tag-blog">Tutoriel</p>
                 <h3>Comment sélectionner son artiste custom ?</h3>
@@ -296,7 +343,7 @@ function LandingPage() {
               </div>
             </div>
             <div className="card-article p-40">
-              <div className="img-card"><img src="../public/11.png" alt="" /></div>
+              <div className="img-card"><img src={blog11} alt="" /></div>
               <div className="article-text">
                 <p className="tag-blog">Avis</p>
                 <h3>Air force 1, la paire faite pour le custom ?</h3>
@@ -315,27 +362,25 @@ function LandingPage() {
         <div className="title-footer">
           <p className="uppercase f-bold">Notre Waiting list</p>
           <h2>Les sneakers customs 
-            <span className="text-orange">t’intéressent ?</span></h2>
-          <p>Inscris-toi à notre waiting list pour découvrir en avant-première <br />
+            <span className="text-orange"> t’intéressent ?</span></h2>
+          <p className='text-width'>Inscris-toi à notre waiting list pour découvrir en avant-première
             les paires de sneakers customisées de notre marketplace !</p>
         </div>
         <div className="input-newsleter input-newsleter-sign">
           <input type="text" className="m-b-50" placeholder="Entre ton adresse mail" />
-          <button className="m-t-50">S'inscrire</button>
+          <button>S'inscrire</button>
         </div>
         <div className="footer-items">
           <div className="logo-footer">
-            {/* SVG content here */}
+            <img src={logoCopcust} alt='Logo CopCust' />
           </div>
           <div className="copyright">
             <p>COPCUST COPYRIGHT © 2024 - TOUS DROITS RÉSERVÉS</p>
           </div>
           <div className="rs-img">
-            <img src="./social_media/tiktok.svg" alt="" />
-            <img src="./social_media/instagram.svg" alt="" />
-            <img src="./social_media/facebook.svg" alt="" />
-            <img src="./social_media/pinterest.svg" alt="" />
-            <img src="./social_media/youtube.svg" alt="" />
+          <a href="https://www.tiktok.com/@copcustfr"><img src={tiktokIcon} alt="" /></a>
+            <a href="https://www.instagram.com/copcustfr/"><img src={instagramIcon} alt="" /></a>
+            <a href="https://pin.it/3HSQjkm3a"><img src={pinterestIcon} alt="" /></a>
           </div>
           <div className="copyright-mobile">
             <p>COPCUST COPYRIGHT © 2024 - TOUS DROITS RÉSERVÉS</p>

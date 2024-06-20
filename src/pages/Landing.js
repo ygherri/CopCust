@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logoMobile from '../../src/images/logo_mini_copcust.svg';
 import arrowBottom from '../../src/images/arrow-bottom.svg';
 import artist1 from '../../src/images/artist1.png';
@@ -29,6 +29,66 @@ import pinterestIcon from '../../src/images/social_media/pinterest.svg';
 import logoCopcust from '../../src/images/logo-copcust.png';
 import menu from '../../src/images/menu-burger.png'
 function LandingPage() {
+    const handleSlideChange = (index) => {
+        setCurrentSlide(index);
+      };
+      const [setCurrentSlide] = useState(0);
+      useEffect(() => {
+        const submitButton = document.getElementById('submitButton');
+        
+        const handleSubmit = (e) => {
+          e.preventDefault();
+    
+          const nom = document.getElementById('nom').value.trim();
+          const prenom = document.getElementById('prenom').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const message = document.getElementById('message').value.trim();
+    
+          if (!nom || !prenom || !email || !message) {
+            alert('Tous les champs sont obligatoires.');
+            return;
+          }
+    
+          const data = {
+            email: email,
+            attributes: {
+              NOM: nom,
+              PRENOM: prenom,
+              MESSAGE: message
+            },
+            listIds: [2, 7],
+            updateEnabled: true
+          };
+    
+          fetch('https://api.brevo.com/v3/contacts', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'api-key': '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'
+            },
+            body: JSON.stringify(data)
+          })
+          .then(response => response.json())
+          .then(data => {
+            console.log('Success:', data);
+            alert('Inscription réussie!');
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+            alert('Erreur lors de l\'inscription.');
+          });
+        };
+    
+        if (submitButton) {
+          submitButton.addEventListener('click', handleSubmit);
+        }
+    
+        return () => {
+          if (submitButton) {
+            submitButton.removeEventListener('click', handleSubmit);
+          }
+        };
+      }, []);
   return (
     <div>
       <header>
@@ -42,6 +102,17 @@ function LandingPage() {
         <nav>
           <div className="logo">
           <img src={logoCopcust} alt="" />
+          </div>
+          <div className='justify-content'>
+          <div className='liens'>
+            <ul>
+                <li>Lien</li>
+                <li>Lien</li>
+                <li>Lien</li>
+            </ul>
+          </div>
+          
+          <div className='btn-signin'>S'inscrire à la waitlist</div>
           </div>
         </nav>
         <div className="header-text">
@@ -251,11 +322,11 @@ function LandingPage() {
           <p>Inscris-toi afin d’être l’un des premier à vendre tes produits sur Copcust  ! </p>
         </div>
         <div className="input-newsleter">
-          <input type="text" className="input-width" placeholder="Nom" />
-          <input type="text" className="input-width" placeholder="Prénom" />
-          <input type="text" className="input-width" placeholder="Adresse mail" />
-          <textarea className="input-width" placeholder="Entrez votre message "></textarea>
-          <button className="submit btn-rose">Envoyer mon message</button>
+          <input type="text" id='nom' className="input-width" placeholder="Nom" />
+          <input type="text" id='prenom' className="input-width" placeholder="Prénom" />
+          <input type="text" id='email' className="input-width" placeholder="Adresse mail" />
+          <textarea id='message' className="input-width" placeholder="Entrez votre message "></textarea>
+          <button id="submitButton" className="submit btn-rose">Envoyer mon message</button>
         </div>
         <div className="footer-items">
           <div className="logo-footer">

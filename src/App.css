@@ -8,6 +8,7 @@ Header {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 800px;
+    padding-top: 50px;
 }
 h3 {
     font-family: "Poppins", sans-serif;
@@ -74,10 +75,34 @@ p, ul li, button{
 .logo svg {
     width: 90%;
 }
+.btn-signin {
+    border: none;
+    color: #fff;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "Raleway", sans-serif;
+    background-color: #000;
+}
+.justify-content {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
 nav {
     display: flex;
     justify-content: space-between;
     padding: 40px 60px;
+    border-radius: 24px;
+    background: var(--White-100, #FFF);
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.08);
+    align-items: center;
+    height: 20px;
+    width: 90%;
+    margin: auto;
 }
 .header-text {
     padding-left: 60px;
@@ -436,7 +461,7 @@ footer {
     border: none;
     padding: 10px 30px;
     border-radius: 5px;
-    transform: translate3d(185px, -64px, 10px);
+    transform: translate3d(227px, -65px, 10px);
     cursor: pointer;
     height: 50px;
     font-weight: bold;
@@ -539,8 +564,8 @@ footer {
     color: #bbb;
   }
   .artist-s img {
-    width: 75px;
-    height: 75px;
+    width: 100px;
+    height: 100px;
     flex-shrink: 0;
   }
  .title-upper {
@@ -640,6 +665,22 @@ footer {
     position: absolute;
     bottom: 5%;
   }
+  .liens {
+    width: 50%;
+  }
+  .liens  ul{
+    display: flex;
+  }
+  .liens ul {
+    list-style-type: none;
+    justify-content: space-around;
+
+  }
+  .liens ul li {
+    margin-right: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
 
 @media (max-width: 768px) { 
     
@@ -666,6 +707,9 @@ footer {
         white-space: normal;
         padding: 0 40px;
     }
+    .title-footer h2{
+        margin: 0 0 40px;
+    }
     .uppercase {
         display: none;
     }
@@ -674,6 +718,10 @@ footer {
     }
     .m-t-50 {
         margin-top: 50px;
+    }
+    .text-width {
+        margin: auto;
+        width: 25%;
     }
     
     .btn-nav-mobile button {
@@ -759,6 +807,15 @@ footer {
     }
     .header2 {
         height: 765px;
+    }
+    Header {
+        padding-top: 0;
+    }
+    .gallery-sneakers img {
+        width: 100%;
+    }
+    .gallery-sneakers {
+        margin: 50px 0;
     }
     
     .scroll-mobile p {
@@ -902,7 +959,7 @@ footer {
             padding-left: 0;
         }
         .input-newsleter button {
-            transform: none;
+            transform: translate3d(120px, -65px, 10px);
         }
         .input-newsleter {
             width: 90%;
