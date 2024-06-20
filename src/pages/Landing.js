@@ -29,6 +29,7 @@ import pinterestIcon from '../../src/images/social_media/pinterest.svg';
 import logoCopcust from '../../src/images/logo-copcust.png';
 import menu from '../../src/images/menu-burger.png'
 function LandingPage() {
+  
     const handleSlideChange = (index) => {
         setCurrentSlide(index);
       };
