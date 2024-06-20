@@ -117,13 +117,13 @@ function LandingPage() {
               <div className="concept_stat">
                 <div className="left_stat">
                   <p className="text-blue size-80">+ de 
-                    <span>20</span>
+                    <span> 20</span>
                   </p>
                   <p className="f-bold">artistes custom</p>
                 </div>
                 <div className="right_stat">
                   <p className="text-blue size-80">+ de 
-                    <span>10</span>
+                    <span> 10</span>
                   </p>
                   <p className="f-bold">styles différents</p>
                 </div>
@@ -132,7 +132,7 @@ function LandingPage() {
           </div>
         </div>
       </div>
-      <div className="paires">
+      <div className="paires paires-bg">
         <div className="titles-paires">
           <p className="title-m f-bold title-upper">Nos paires</p>
           <h2><span className="text-rose">Acheter</span> directement<br />vos paires à personnaliser</h2>
@@ -145,8 +145,8 @@ function LandingPage() {
         </div>
         <div className="btn-paires btn-rose"><button>Acheter ma paire personnalisée</button></div>
       </div>
-      <div className="artist-custom">
-        <div className="title-m-b text-center p-40">
+      <div className="artist-custom  artist-custom-bg">
+        <div className="title-m-b text-center p-40 titles-custom">
           <p className="title-m f-bold title-upper">Nos artist custom</p>
           <h2>Nos <span className="text-blue">Artist Custom </span>sont à votre disposition</h2>
         </div>

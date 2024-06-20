@@ -29,27 +29,28 @@ import pinterestIcon from '../../src/images/social_media/pinterest.svg';
 import logoCopcust from '../../src/images/logo-copcust.png';
 import menu from '../../src/images/menu-burger.png'
 function LandingPage() {
-  
     const handleSlideChange = (index) => {
         setCurrentSlide(index);
       };
-      const [setCurrentSlide] = useState(0);
+      
+      const [currentSlide, setCurrentSlide] = useState(0);
+      
       useEffect(() => {
         const submitButton = document.getElementById('submitButton');
-        
-        const handleSubmit = (e) => {
+      
+        const handleSubmit = async (e) => {
           e.preventDefault();
-    
+      
           const nom = document.getElementById('nom').value.trim();
           const prenom = document.getElementById('prenom').value.trim();
           const email = document.getElementById('email').value.trim();
           const message = document.getElementById('message').value.trim();
-    
+      
           if (!nom || !prenom || !email || !message) {
             alert('Tous les champs sont obligatoires.');
             return;
           }
-    
+      
           const data = {
             email: email,
             attributes: {
@@ -60,36 +61,49 @@ function LandingPage() {
             listIds: [2, 7],
             updateEnabled: true
           };
-    
-          fetch('https://api.brevo.com/v3/contacts', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'api-key': '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'
-            },
-            body: JSON.stringify(data)
-          })
-          .then(response => response.json())
-          .then(data => {
-            console.log('Success:', data);
+      
+          try {
+            const response = await fetch('https://api.brevo.com/v3/contacts', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'api-key': apiKey
+              },
+              body: JSON.stringify(data)
+            });
+      
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+      
+            let responseData;
+            try {
+              responseData = await response.json();
+            } catch (error) {
+              throw new Error('Failed to parse JSON');
+            }
+      
+            console.log('Success:', responseData);
             alert('Inscription réussie!');
-          })
-          .catch((error) => {
+          } catch (error) {
             console.error('Error:', error);
             alert('Erreur lors de l\'inscription.');
-          });
+          }
         };
-    
+      
         if (submitButton) {
           submitButton.addEventListener('click', handleSubmit);
         }
-    
+      
         return () => {
           if (submitButton) {
             submitButton.removeEventListener('click', handleSubmit);
           }
         };
       }, []);
+    
+    
+  
   return (
     <div>
       <header>

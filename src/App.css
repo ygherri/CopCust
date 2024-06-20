@@ -121,7 +121,7 @@ nav {
 }
 .scroll {
     width: 50%;
-    margin: 100px auto 0;
+    margin: 216px auto 0;
     text-align: center;
     cursor: pointer;
 }
@@ -521,7 +521,10 @@ footer {
 .couronne-mobile {
     display: none;
 }
-.paires, .artist-custom {
+.paires {
+    padding: 80px;
+}
+.titles-custom {
     padding: 80px;
 }
 .gallery-sneakers img {
@@ -681,7 +684,10 @@ footer {
     font-weight: bold;
     cursor: pointer;
   }
-
+  .text-width {
+    margin: auto;
+    width: 25%;
+}
 @media (max-width: 768px) { 
     
     .carousel-section{
@@ -719,11 +725,14 @@ footer {
     .m-t-50 {
         margin-top: 50px;
     }
+    
     .text-width {
         margin: auto;
-        width: 25%;
+        width: 80%;
     }
-    
+    #submitButton {
+        transform: none !important;
+    }
     .btn-nav-mobile button {
         background-color: #F18F01;
         border: none;
@@ -803,7 +812,7 @@ footer {
         margin: auto;
     }
     .scroll-mobile-2 {
-        margin-top: 150px;
+        margin-top: 126px;
     }
     .header2 {
         height: 765px;
@@ -845,7 +854,7 @@ footer {
         margin-top: 80px;
     }
     .concept_stat {
-        margin: 80px 0;
+        margin: 80px 0 0;
         display: block;
     }
     .size-80, .size-80 span  {
