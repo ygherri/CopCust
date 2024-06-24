@@ -1,3 +1,9 @@
+# Liens des deux landing pages : 
+
+ https://copcust.vercel.app/
+ 
+ https://copcust.vercel.app/landing-artist
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
