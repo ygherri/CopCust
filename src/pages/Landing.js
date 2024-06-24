@@ -27,7 +27,11 @@ import tiktokIcon from '../../src/images/social_media/tiktok.svg';
 import instagramIcon from '../../src/images/social_media/instagram.svg';
 import pinterestIcon from '../../src/images/social_media/pinterest.svg';
 import logoCopcust from '../../src/images/logo-copcust.png';
-import menu from '../../src/images/menu-burger.png'
+import menu from '../../src/images/menu-burger.png';
+import bgArtist from '../../src/images/artist-custom-bg.png';
+import bgArrowBottom from '../../src/images/bg-arrow-bottom.png';
+import bgArrowTop from '../../src/images/bg-arrow-top.png';
+
 function LandingPage() {
     const handleSlideChange = (index) => {
         setCurrentSlide(index);
@@ -111,7 +115,9 @@ function LandingPage() {
           <div className="logo-mobile">
             <img src={logoMobile} alt="logo mobile" />
           </div>
+          <div>
           <img src={menu} alt="menu"/>
+          </div>
 
         </div>
         <nav>
@@ -130,14 +136,10 @@ function LandingPage() {
           <div className='btn-signin'>S'inscrire à la waitlist</div>
           </div>
         </nav>
-        <div className="header-text">
-          <h1 className="h1-desktop"><span className="text-blue">Copcust</span> <br />
+        <div className="header-text header-text1">
+          <h1><span className="text-blue">Copcust</span> <br />
             Votre art au<br />
             Pieds des autres
-          </h1>
-          <h1 className="h1-mobile"><span className="text-blue">Copcust</span> <br />
-            Votre art au<br />
-            Pieds des <br />autres
           </h1>
           <p>Le site numéro 1 dans la vente de sneakers customisées !</p>
           <div className="scroll-mobile">
@@ -155,13 +157,14 @@ function LandingPage() {
           <img src={arrowBottom} alt="" />
         </div>
       </header>
-      <div className="concept">
+      <main className='main1'>
+      <section className="concept">
         <div className="concept-title">
           <p className="f-bold title-uppercase">Notre concept</p>
         </div>
         <div className="d-flex-mobile d-flex-concept">
           <div className="left_concept">
-            <h2>Vends ton art et <span className="text-blue">révolutionne  <br /> le style</span> de tous !
+            <h2>Vends ton art et <span className="text-blue">révolutionne le style</span> de tous !
             </h2>
           </div>
           <div className="right_concept">
@@ -179,14 +182,19 @@ function LandingPage() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="artist-custom">
-        <div className="title-m-b text-center p-40">
+          </div>
+          </section>
+        
+      
+      <section className="artist-custom">
+        <div className="title-m-b text-center p-40 p-left-80">
           <p className="title-m f-bold title-uppercase">Nos artist custom</p>
           <h2>Ils nos ont rejoint, <span className="text-rose">pourquoi pas vous ?</span></h2>
         </div>
         <div className="gallery-artist">
+        <div className='bgArtist'>
+        <img src={bgArtist}/>
+        </div>
           <div className="artist-1 artist-s">
             <img src={artist1} alt="" />
           </div>
@@ -233,8 +241,9 @@ function LandingPage() {
             <button>Je rejoins le groupe</button>
           </div>
         </div>
-      </div>
-      <div className="valeurs">
+        </section>
+      
+      <section className="valeurs">
         <div className="titles">
           <div className="icones-title">
             <img className="left-title" src={leftTitle} alt="" />
@@ -260,8 +269,8 @@ function LandingPage() {
             <p>Chaque paire de sneakers est une oeuvre. Laissez parler votre art et vendez la ! </p>
           </div>
         </div>
-      </div>
-      <div className="blog">
+      </section>
+      <section className="blog">
         <div className="titles-blog">
           <p className="title-m f-bold">Le Blog</p>
           <div className="visit_blog">
@@ -329,8 +338,12 @@ function LandingPage() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      </main>
       <footer>
+        <div className='bg-arrow-top'>
+            <img src={bgArrowTop} alt='Arrow top' />
+        </div>
         <div className="title-footer">
           <p className="uppercase f-bold">Notre Waiting list</p>
           <h2>La vente des sneakers <br /><span className="text-rose">t’intéressent ?</span></h2>
@@ -342,6 +355,9 @@ function LandingPage() {
           <input type="text" id='email' className="input-width" placeholder="Adresse mail" />
           <textarea id='message' className="input-width" placeholder="Entrez votre message "></textarea>
           <button id="submitButton" className="submit btn-rose">Envoyer mon message</button>
+        </div>
+        <div className='bg-arrow-bottom'>
+            <img src={bgArrowBottom} alt='Arrow bottom' />
         </div>
         <div className="footer-items">
           <div className="logo-footer">

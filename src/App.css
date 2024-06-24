@@ -130,6 +130,18 @@ nav {
     background-size: contain;
     padding: 80px;
 }
+.bg-concept-artist {
+    background-image: url('../src/images/bg-concept.png');
+    background-repeat: no-repeat;
+    background-size: 370px;
+    background-position-x: right;
+}
+.bgArtist {
+    position: absolute;
+    left: 0;
+    width: 700px;
+    bottom: 5%;
+}
 .concept_title p {
     text-transform: uppercase;
 }
@@ -161,6 +173,10 @@ nav {
     margin-right: 30px;
 }
 .valeurs {
+    background-image: url('../src/images/bg-valeurs.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: 250px;
     padding: 80px;
 }
 .titles {
@@ -392,11 +408,21 @@ nav {
 .p-40 {
     padding: 40px 0;
 }
+.p-left-80 {
+    padding-left: 80px;
+}
 footer {
+    position: relative;
     height: auto;
     text-align: center;
     padding-top: 150px;
     background-position-x: center;
+    margin-top: 60px;
+}
+.bg-arrow-top {
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 .title-uppercase {
     text-transform: uppercase;
@@ -440,11 +466,10 @@ footer {
 }
 .submit {
     border-radius: 10px;
-    font-weight: bold;
     border: none;
     cursor: pointer;
     height: 40px;
-    width: 100%;
+    width: 200px;
     color: #fff;
     background-color: #FF6B8E;
 
@@ -688,6 +713,55 @@ footer {
     margin: auto;
     width: 25%;
 }
+.bg-arrow-bottom {
+    text-align: start;
+}
+.bg-arrow-bottom img{
+    transform: translateY(-181px);
+}
+.main1 {
+    background-image: url('../src/images/bg-concept.png');
+    background-repeat: no-repeat;
+    background-size: 350px;
+    background-position-x: right;
+}
+.main2 {
+    background-image: url('../src/images/bg-concept.png');
+    background-repeat: no-repeat;
+    background-size: 700px;
+    background-position-x: right;
+    background-position-y: 800px;
+}
+.footer2 {
+    background-image: url('../src/images/mail.png');
+    background-repeat: no-repeat;
+    background-position-x: left;
+}
+.paires-perso {
+    position: relative;
+}
+.arrow-right-paires {
+    position: absolute;
+    right: 0;
+    top: 32px;
+    z-index: -1;
+}
+.arrow-left-paires {
+    position: absolute;
+    left: 0;
+    bottom: -73px;
+    z-index: -1;
+}
+.text-transform-upper  {
+    text-transform: uppercase;
+    
+}
+.arrow-desktop {
+    display: block;
+}
+.arrow-mobile {
+    display: none;
+}
 @media (max-width: 768px) { 
     
     .carousel-section{
@@ -709,6 +783,9 @@ footer {
     .p-t-0{
         padding-top: 0px !important;
     }
+    .p-left-80 {
+        padding-left: 0;
+    }
     .title-footer p {
         white-space: normal;
         padding: 0 40px;
@@ -716,16 +793,42 @@ footer {
     .title-footer h2{
         margin: 0 0 40px;
     }
+    .p-40 {
+        padding: 0;
+    }
     .uppercase {
         display: none;
     }
+    .text-transform-upper {
+        margin: -59px 0 40px 0;
+    }
     .header-text h1 {
         margin-top: 0;
+        width: 70%;
     }
     .m-t-50 {
         margin-top: 50px;
     }
+    .input-newsleter {
+        margin: 30px auto 0;
+
+    }
+    .bg-arrow-bottom {
+        transform: translate(-49px, 56px);
+        height: auto;
+        width: 50%;
+    }
+    .submit {
+        color: #000;
+        height: 53px;   
+        border-radius: 7px;
+        font-weight: bold;
+        margin-top: 50px;
+    }
     
+    .bg-arrow-bottom img {
+        width: 145px;
+    }
     .text-width {
         margin: auto;
         width: 80%;
@@ -759,14 +862,28 @@ footer {
     .nav-mobile {   
         display: flex;
         justify-content: space-between;
-        height: 78px;
+        height: 66px;
         align-items: center;
         padding: 12px 24px;
         box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.08);
         background-color: #fff;
+        position: fixed;
+        width: 90%;
+        z-index: 100;
+    }
+    .concept-title {
+        margin: 50px 30px;
     }
     .logo-mobile {
         width: 11%;
+    }
+    .bg-arrow-top {
+        width: 50%;
+        text-align: end;
+    }
+    .bg-arrow-top img {
+        width: 100px;
+        max-width: 100%;
     }
     .left-title, .right-title {
         display: block;
@@ -781,6 +898,9 @@ footer {
         display: flex;
         justify-content: center;
     }
+    .card-article {
+        padding-left: 0 !important;
+    }
     Header {
         background-position-x: 48%;
         background-size: cover;
@@ -792,8 +912,11 @@ footer {
     .h1-desktop {
         display: none;
     }
-    .header-text {
-        padding: 100px 30px;
+    .header-text2 {
+        padding: 192px 30px;
+    }
+    .header-text1 {
+        padding: 192px 30px 100px;
     }
     .header-text p {
         width: 46%;
@@ -812,7 +935,7 @@ footer {
         margin: auto;
     }
     .scroll-mobile-2 {
-        margin-top: 126px;
+        margin-top: 44px;
     }
     .header2 {
         height: 765px;
@@ -832,7 +955,7 @@ footer {
     }
     .concept, .valeurs, .paires{
         padding: 40px;
-        background-color: #F6F6F6;
+        /* background-color: #F6F6F6; */
     }
     .artist-custom {
         padding: 0;
@@ -854,8 +977,12 @@ footer {
         margin-top: 80px;
     }
     .concept_stat {
-        margin: 80px 0 0;
+        margin: 50px 0 0;
         display: block;
+    }
+    .bgArtist {
+        width: 300px;
+        bottom: 8%;
     }
     .size-80, .size-80 span  {
         font-size: 40px !important;
@@ -875,6 +1002,8 @@ footer {
         border-radius: 20px;
         padding: 40px;
         text-align: center;
+        background-size: 100px;
+        background-position-y: 150px;
     }
     .valeurs h2 {
         margin: 20px 0;
@@ -961,7 +1090,11 @@ footer {
             width: 100%;
         }
         footer {
-            padding-top: 100px;
+            padding-top: 110px;
+        }
+        .footer2 {
+            background-position-y: -23px;
+            background-size: 100px;
         }
         .input-newsleter input {
             width: 100%;
@@ -1036,9 +1169,33 @@ footer {
             top: 65%;
         }
         .artist-11 {
-            left: 1%;
+            left: 35%;
             top: 70%;
         }
-
+        .arrow-left-paires img, .arrow-right-paires img {
+            width: 66px;
+        }
+        .arrow-left-paires, .arrow-right-paires {
+            z-index: 0;
+        }
+        .arrow-left-paires {
+            bottom: 26px;
+        }
+        .arrow-desktop {
+            display: none;
+        }
+        .arrow-mobile {
+            display: block;
+        }
+        .lien-blog {
+            justify-content: end;
+        }
+        .paires, .products, .titles-blog {
+            text-align: center;
+        }
+        .main2 {
+            background-position-y: 700px;
+            background-size: 200px;
+        }
 
     }

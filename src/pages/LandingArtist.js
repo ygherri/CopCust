@@ -35,7 +35,13 @@ import blog11 from '../../src/images/11.png';
 import tiktokIcon from '../../src/images/social_media/tiktok.svg';
 import instagramIcon from '../../src/images/social_media/instagram.svg';
 import pinterestIcon from '../../src/images/social_media/pinterest.svg';
-import menu from '../../src/images/menu-burger.png'
+import menu from '../../src/images/menu-burger.png';
+import bgArtist from '../../src/images/artist-custom-bg.png';
+import bgArrowBottom from '../../src/images/bg-arrow-bottom.png';
+import bgArrowRight from '../../src/images/arrow-right-paires.png';
+import bgArrowRightMobile from '../../src/images/top-right-arrow.png';
+import bgArrowBottomMobile from '../../src/images/bottom-left-arrow.png';
+
 function LandingPage() {
 
   const handleSlideChange = (index) => {
@@ -68,7 +74,7 @@ function LandingPage() {
           <div className='btn-signin'>S'inscrire à la waitlist</div>
           </div>
         </nav>
-        <div className="header-text">
+        <div className="header-text header-text2">
           <h1 className="h1-desktop">
             <span className="text-blue">Copcust</span> <br />
             L'art à vos<br />
@@ -93,9 +99,9 @@ function LandingPage() {
           <img src={arrowBottom} alt="" />
         </div>
       </header>
-      <div className="concept">
+      <main className='main2'>
+      <section className="concept">
         <div className="concept-title">
-          <img className="couronne-mobile" src={couronneMobile} alt="" />
           <img className="couronne" src={couronne} alt="" />
           <p className="f-bold title-upper">Notre concept</p>
         </div>
@@ -131,8 +137,8 @@ function LandingPage() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="paires paires-bg">
+      </section>
+      <section className="paires paires-bg">
         <div className="titles-paires">
           <p className="title-m f-bold title-upper">Nos paires</p>
           <h2><span className="text-rose">Acheter</span> directement<br />vos paires à personnaliser</h2>
@@ -144,13 +150,16 @@ function LandingPage() {
           <img src={paire4} alt="" />
         </div>
         <div className="btn-paires btn-rose"><button>Acheter ma paire personnalisée</button></div>
-      </div>
-      <div className="artist-custom  artist-custom-bg">
+      </section>
+      <section className="artist-custom  artist-custom-bg">
         <div className="title-m-b text-center p-40 titles-custom">
           <p className="title-m f-bold title-upper">Nos artist custom</p>
           <h2>Nos <span className="text-blue">Artist Custom </span>sont à votre disposition</h2>
         </div>
         <div className="gallery-artist">
+        <div className='bgArtist'>
+        <img src={bgArtist}/>
+        </div>
           <div className="artist-1 artist-s">
             <img src={artist1} alt="" />
           </div>
@@ -195,11 +204,15 @@ function LandingPage() {
           </div>
           <div className="btn-rose btn-position"><button>Je découvre les partenaires</button></div>
         </div>
-      </div>
-      <div className="paires paires-perso">
+      </section>
+      <section className="paires paires-perso">
         <div className="titles-paires">
           <p className="title-m f-bold title-upper">Nos paires personnalisées</p>
           <h2>Découvrez toutes les paires <span className="text-violet">déjà <br />personnalisées </span>qui vous attendent</h2>
+        </div>
+        <div className='arrow-right-paires'>
+            <img className='arrow-desktop' src={ bgArrowRight}/>
+            <img className='arrow-mobile' src={ bgArrowRightMobile}/>
         </div>
         <div className="gallery-sneakers">
           <img src={pairePerso1} alt="" />
@@ -207,9 +220,13 @@ function LandingPage() {
           <img src={pairePerso3} alt="" />
           <img src={pairePerso4} alt="" />
         </div>
+        <div className='arrow-left-paires'>
+            <img className='arrow-desktop' src={ bgArrowBottom}/>
+            <img className='arrow-mobile' src={ bgArrowBottomMobile}/>
+        </div>
         <div className="btn-paires btn-rose"><button>Personnaliser ma paire</button></div>
-      </div>
-      <div className="valeurs">
+      </section>
+      <section className="valeurs">
         <div className="titles">
           <div className="icones-title">
             <img className="left-title" src="%PUBLIC_URL%/left-title.svg" alt="" />
@@ -237,8 +254,8 @@ function LandingPage() {
             <p>Chaque paire de sneakers est une œuvre. Copcust est plus qu'une simple marketplace, c'est une révolution dans la sneakers personnalisée.</p>
           </div>
         </div>
-      </div>
-      <div className="products">
+      </section>
+      <section className="products">
         <div className="titles-products">
           <p className="title-m f-bold">Les produits</p>
           <div>
@@ -288,8 +305,8 @@ function LandingPage() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="blog">
+      </section>
+      <section className="blog">
         <div className="titles-blog">
           <p className="title-m f-bold title-upper">Le Blog</p>
           <div className="visit_blog">
@@ -357,10 +374,11 @@ function LandingPage() {
             </div>
           </div>
         </div>
-      </div>
-      <footer>
+      </section>
+      </main>
+      <footer className='footer2'>
         <div className="title-footer">
-          <p className="uppercase f-bold">Notre Waiting list</p>
+          <p className="text-transform-upper f-bold">Notre Waiting list</p>
           <h2>Les sneakers customs 
             <span className="text-orange"> t’intéressent ?</span></h2>
           <p className='text-width'>Inscris-toi à notre waiting list pour découvrir en avant-première
