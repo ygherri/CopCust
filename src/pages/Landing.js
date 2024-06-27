@@ -71,7 +71,7 @@ function LandingPage() {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
-                'api-key': apiKey
+                // 'api-key': apiKey
               },
               body: JSON.stringify(data)
             });
