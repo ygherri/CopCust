@@ -9,8 +9,8 @@ function App() {
     
       <Router>
     <Routes>
-      <Route path="/" element={<Landing />} />
-      <Route path="/landing-artist" element={<LandingArtist />} />
+      <Route path="/landing-visiteurs" element={<Landing />} />
+      <Route path="/" element={<LandingArtist />} />
     </Routes>
     </Router>
   );
